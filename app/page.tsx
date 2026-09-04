@@ -43,7 +43,7 @@ export default function Home() {
       <div className="topline">
         <div className="container topline-inner">
           <span>Разработка и производство ветеринарных препаратов</span>
-          <div><a href="tel:+74951064664">+7 (495) 106-46-64</a><span className="dot">•</span><a href="mailto:info@reprovet.ru">info@reprovet.ru</a></div>
+          <div><a href="tel:+74959891471">+7 (495) 989-14-71</a></div>
         </div>
       </div>
 
@@ -154,12 +154,12 @@ export default function Home() {
         <div className="container contact-inner">
           <div><div className="kicker light">На связи</div><h2>Обсудим задачу<br/>вашей фермы?</h2></div>
           <p>Наши специалисты помогут подобрать решение и ответят на вопросы по применению препаратов.</p>
-          <a className="contact-phone" href="tel:+74951064664"><span><Phone/></span><small>Позвонить специалисту</small><strong>+7 (495) 106-46-64</strong></a>
+          <a className="contact-phone" href="tel:+74959891471"><span><Phone/></span><small>Позвонить специалисту</small><strong>+7 (495) 989-14-71</strong></a>
         </div>
       </section>
 
       <footer>
-        <div className="container footer-top"><Brand/><div><strong>Продукция</strong><a href="#products">Каталог препаратов</a><a href="#research">Материалы</a><a href="#contacts">Где купить</a></div><div><strong>Компания</strong><a href="#company">О компании</a><a href="#news">Новости</a><a href="#contacts">Контакты</a></div><div><strong>Контакты</strong><a href="tel:+74951064664">+7 (495) 106-46-64</a><a href="mailto:info@reprovet.ru">info@reprovet.ru</a></div></div>
+        <div className="container footer-top"><Brand/><div><strong>Продукция</strong><a href="#products">Каталог препаратов</a><a href="#research">Материалы</a><a href="#contacts">Где купить</a></div><div><strong>Компания</strong><a href="#company">О компании</a><a href="#news">Новости</a><a href="#contacts">Контакты</a></div><div><strong>Контакты</strong><a href="tel:+74959891471">+7 (495) 989-14-71</a><span>Московская область</span></div></div>
         <div className="container footer-bottom"><span>© 2026 РЕПРОВЕТ</span><span>Информация предназначена для ветеринарных специалистов</span><a href="#top">Наверх ↑</a></div>
       </footer>
     </main>
