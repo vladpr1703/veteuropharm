@@ -1,0 +1,159 @@
+.company {
+  background: var(--teal-dark);
+  color: white;
+  padding: 100px 0;
+  overflow: hidden;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  align-items: center;
+}
+.visual {
+  height: 475px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: radial-gradient(
+    circle at 45% 40%,
+    rgba(67, 174, 159, 0.4),
+    transparent 45%
+  );
+}
+.labCard {
+  position: absolute;
+  left: 18%;
+  top: 24%;
+  width: 245px;
+  height: 250px;
+  background: #e8f4f0;
+  color: var(--ink);
+  padding: 33px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  svg {
+    color: var(--teal);
+    width: 42px;
+    height: 42px;
+  }
+  strong {
+    font:
+      700 4rem Georgia,
+      serif;
+    margin-top: 33px;
+  }
+  span {
+    font-size: 0.83rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+}
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(196, 223, 75, 0.35);
+  border-radius: 50%;
+}
+.o1 {
+  width: 340px;
+  height: 340px;
+  left: 8%;
+  top: 14%;
+}
+.o2 {
+  width: 430px;
+  height: 180px;
+  left: 1%;
+  top: 31%;
+  transform: rotate(-35deg);
+}
+.vertical {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  writing-mode: vertical-rl;
+  font-size: 0.56rem;
+  letter-spacing: 0.3em;
+  color: #85aaa3;
+}
+.copy {
+  h2 {
+    font:
+      700 clamp(2.5rem, 4vw, 4rem)/1.05 Georgia,
+      serif;
+    letter-spacing: -0.035em;
+    margin: 16px 0 0;
+  }
+  > p:not(.lead) {
+    color: #bcd1cc;
+    line-height: 1.7;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0;
+    display: grid;
+    gap: 12px;
+  }
+  li {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: #deebe8;
+    svg {
+      color: var(--lime);
+      width: 18px;
+    }
+  }
+}
+.kicker {
+  color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: white;
+}
+.button {
+  min-height: 54px;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  background: white;
+  color: var(--teal-dark);
+  margin-top: 8px;
+}
+@media (max-width: 1000px) {
+  .grid {
+    gap: 45px;
+  }
+}
+@media (max-width: 680px) {
+  .company {
+    padding: 70px 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+  .visual {
+    height: 390px;
+  }
+  .labCard {
+    left: 12%;
+    width: 225px;
+    height: 230px;
+  }
+  .o1 {
+    width: 300px;
+    height: 300px;
+  }
+}

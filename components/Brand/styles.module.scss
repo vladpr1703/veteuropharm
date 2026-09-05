@@ -1,0 +1,71 @@
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 270px;
+}
+.mark {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    path:first-child {
+      fill: var(--lime);
+    }
+    path:nth-child(2) {
+      fill: var(--teal);
+    }
+    circle {
+      fill: #7db523;
+    }
+  }
+}
+.copy {
+  display: flex;
+  flex-direction: column;
+  strong {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    color: var(--ink);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 1.24rem;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .accent {
+    font-weight: 700;
+  }
+  small {
+    text-transform: uppercase;
+    font-size: 0.51rem;
+    font-weight: 700;
+    letter-spacing: 0.065em;
+    color: #71827d;
+    margin-top: 5px;
+    white-space: nowrap;
+  }
+}
+.light {
+  .copy {
+    strong {
+      color: #f3f8f6;
+    }
+    small {
+      color: #9ebbb5;
+    }
+  }
+  .mark svg path:nth-child(2) {
+    fill: #36a49a;
+  }
+}
+@media (max-width: 680px) {
+  .brand {
+    min-width: 0;
+  }
+}
