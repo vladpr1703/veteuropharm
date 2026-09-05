@@ -13,27 +13,6 @@ export const metadata: Metadata = {
 
 const contacts = [
   {
-    title: 'Отдел продаж',
-    label: '+7 (981) 721-51-37',
-    href: 'tel:+79817215137',
-    icon: Phone,
-    kind: 'primary',
-  },
-  {
-    title: 'Дополнительный телефон',
-    label: '+7 (908) 143-76-03',
-    href: 'tel:+79081437603',
-    icon: Phone,
-    kind: 'default',
-  },
-  {
-    title: 'Связаться со специалистом',
-    label: '+7 (926) 119-78-95',
-    href: 'tel:+79261197895',
-    icon: Phone,
-    kind: 'default',
-  },
-  {
     title: 'Написать в мессенджер',
     label: 'WhatsApp',
     href: 'https://wa.me/79261197895',
@@ -76,6 +55,19 @@ export default function ContactsPage() {
 
       <section className={styles.contactBand} aria-label="Контактные данные">
         <Container className={styles.contactGrid}>
+          <div className={`${styles.contactItem} ${styles.primary}`}>
+            <span className={styles.contactIcon}>
+              <Phone />
+            </span>
+            <span className={styles.contactCopy}>
+              <small>Отдел продаж</small>
+              <span className={styles.phoneList}>
+                <a href="tel:+79817215137">+7 (981) 721-51-37</a>
+                <a href="tel:+79081437603">+7 (908) 143-76-03</a>
+                <a href="tel:+79261197895">+7 (926) 119-78-95</a>
+              </span>
+            </span>
+          </div>
           {contacts.map(
             ({ title, label, href, icon: Icon, external, kind }) => (
               <a
