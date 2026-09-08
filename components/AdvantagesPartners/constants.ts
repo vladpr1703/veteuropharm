@@ -1,26 +1,31 @@
-import { CalendarClock, Handshake, ShieldCheck, ThumbsUp } from "lucide-react";
+import { CalendarClock, Handshake, ShieldCheck, ThumbsUp } from 'lucide-react';
+import belVitunipharmLogo from '@/public/partner-belvitunipharm-original.png';
+import gomelLogo from '@/public/partner-gzvp.png';
+import mogilevLogo from '@/public/partner-mzvp-v2.png';
+import tmLogo from '@/public/partner-tm.png';
+import vitebskLogo from '@/public/partner-vzvp-v2.svg';
 
 export const advantages = [
-  { icon: ShieldCheck, title: "Надёжность, проверенная годами" },
-  { icon: CalendarClock, title: "Соблюдение сроков поставки" },
-  { icon: Handshake, title: "Ориентация на долгосрочное партнёрство" },
-  { icon: ThumbsUp, title: "Качество от ведущих производителей Беларуси" },
+  { icon: ShieldCheck, title: 'Надёжность, проверенная годами' },
+  { icon: CalendarClock, title: 'Соблюдение сроков поставки' },
+  { icon: Handshake, title: 'Ориентация на долгосрочное партнёрство' },
+  { icon: ThumbsUp, title: 'Качество от ведущих производителей Беларуси' },
 ];
 
 export const partners = [
-  { src: "/partner-tm.png", alt: "ТМ" },
+  { src: tmLogo, alt: 'ТМ' },
   {
-    src: "/partner-mzvp-v2.png",
-    alt: "Могилевский завод ветеринарных препаратов",
+    src: mogilevLogo,
+    alt: 'Могилевский завод ветеринарных препаратов',
   },
   {
-    src: "/partner-vzvp-v2.svg",
-    alt: "Витебский завод ветеринарных препаратов",
+    src: vitebskLogo,
+    alt: 'Витебский завод ветеринарных препаратов',
   },
-  { src: "/partner-gzvp.png", alt: "Гомельский завод ветеринарных препаратов" },
+  { src: gomelLogo, alt: 'Гомельский завод ветеринарных препаратов' },
   {
-    src: "/partner-belvitunipharm-original.png",
-    alt: "БелВитунифарм",
+    src: belVitunipharmLogo,
+    alt: 'БелВитунифарм',
     wide: true,
   },
 ];

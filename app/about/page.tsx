@@ -3,6 +3,9 @@ import { Award, FileSignature, ShieldCheck } from 'lucide-react';
 import { Container } from '@/components/Container';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import consultationImage from '@/public/about-consultation.png';
+import aboutHero from '@/public/about-hero.png';
+import licenseImage from '@/public/vet-license-1.jpg';
 import { benefits, steps } from './constants';
 import styles from './styles.module.scss';
 
@@ -13,7 +16,7 @@ export default function AboutPage() {
       <section className={styles.hero}>
         <Image
           className={styles['hero-image']}
-          src="/about-hero.png"
+          src={aboutHero}
           alt="Коровы на пастбище"
           fill
           priority
@@ -93,7 +96,7 @@ export default function AboutPage() {
       <section className={styles.consultation}>
         <Image
           className={styles['consult-image']}
-          src="/about-consultation.png"
+          src={consultationImage}
           alt="Сельскохозяйственные животные"
           fill
           sizes="100vw"
@@ -130,13 +133,13 @@ export default function AboutPage() {
           </div>
           <a
             className={styles['license-preview']}
-            href="/vet-license-1.jpg"
+            href={licenseImage.src}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Открыть лицензию в полном размере"
           >
             <Image
-              src="/vet-license-1.jpg"
+              src={licenseImage}
               alt="Лицензия на осуществление фармацевтической деятельности"
               width={600}
               height={856}

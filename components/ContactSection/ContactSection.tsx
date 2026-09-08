@@ -1,6 +1,6 @@
-import { Phone } from "lucide-react";
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
+import { Phone } from 'lucide-react';
+import { Container } from '@/components/Container';
+import styles from './styles.module.scss';
 
 export const ContactSection = () => (
   <section className={styles.contact} id="contacts">

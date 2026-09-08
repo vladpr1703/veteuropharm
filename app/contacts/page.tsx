@@ -1,10 +1,11 @@
-import Image from "next/image";
-import { Phone } from "lucide-react";
-import { Container } from "@/components/Container";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
-import styles from "./styles.module.scss";
-import { contacts } from "./constants";
+import Image from 'next/image';
+import { Phone } from 'lucide-react';
+import { Container } from '@/components/Container';
+import { SiteFooter } from '@/components/SiteFooter';
+import { SiteHeader } from '@/components/SiteHeader';
+import heroVet from '@/public/hero-vet.png';
+import styles from './styles.module.scss';
+import { contacts } from './constants';
 
 export default function ContactsPage() {
   return (
@@ -12,15 +13,15 @@ export default function ContactsPage() {
       <SiteHeader />
       <section className={styles.hero}>
         <Image
-          className={styles["hero-image"]}
-          src="/hero-vet.png"
+          className={styles['hero-image']}
+          src={heroVet}
           alt="Ветеринарный специалист на ферме"
           fill
           priority
           sizes="100vw"
         />
         <div className={styles.overlay} />
-        <Container className={styles["hero-inner"]}>
+        <Container className={styles['hero-inner']}>
           <span className={styles.kicker}>Всегда на связи</span>
           <h1>Контакты</h1>
           <p>
@@ -31,17 +32,17 @@ export default function ContactsPage() {
       </section>
 
       <section
-        className={styles["contact-band"]}
+        className={styles['contact-band']}
         aria-label="Контактные данные"
       >
-        <Container className={styles["contact-grid"]}>
-          <div className={`${styles["contact-item"]} ${styles.primary}`}>
-            <span className={styles["contact-icon"]}>
+        <Container className={styles['contact-grid']}>
+          <div className={`${styles['contact-item']} ${styles.primary}`}>
+            <span className={styles['contact-icon']}>
               <Phone />
             </span>
-            <span className={styles["contact-copy"]}>
+            <span className={styles['contact-copy']}>
               <small>Отдел продаж</small>
-              <span className={styles["phone-list"]}>
+              <span className={styles['phone-list']}>
                 <a href="tel:+79817215137">+7 (981) 721-51-37</a>
                 <a href="tel:+79081437603">+7 (908) 143-76-03</a>
                 <a href="tel:+79261197895">+7 (926) 119-78-95</a>
@@ -51,16 +52,16 @@ export default function ContactsPage() {
           {contacts.map(
             ({ title, label, href, icon: Icon, external, kind }) => (
               <a
-                className={`${styles["contact-item"]} ${styles[kind]}`}
+                className={`${styles['contact-item']} ${styles[kind]}`}
                 href={href}
                 key={label}
-                target={external ? "_blank" : undefined}
-                rel={external ? "noreferrer" : undefined}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noreferrer' : undefined}
               >
-                <span className={styles["contact-icon"]}>
+                <span className={styles['contact-icon']}>
                   <Icon />
                 </span>
-                <span className={styles["contact-copy"]}>
+                <span className={styles['contact-copy']}>
                   <small>{title}</small>
                   <strong>{label}</strong>
                 </span>

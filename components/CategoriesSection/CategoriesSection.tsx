@@ -1,7 +1,7 @@
-import { ArrowRight } from "lucide-react";
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
-import { categories } from "./constants";
+import { ArrowRight } from 'lucide-react';
+import { Container } from '@/components/Container';
+import styles from './styles.module.scss';
+import { categories } from './constants';
 
 export const CategoriesSection = () => (
   <section className={styles.section} id="categories">
@@ -21,7 +21,7 @@ export const CategoriesSection = () => (
         {categories.map(({ icon: Icon, title }, index) => (
           <article className={styles.card} key={title}>
             <span className={styles.number}>
-              {String(index + 1).padStart(2, "0")}
+              {String(index + 1).padStart(2, '0')}
             </span>
             <span className={styles.icon}>
               <Icon strokeWidth={1.6} aria-hidden="true" />

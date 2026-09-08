@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useState } from "react";
-import { ArrowRight, Menu, X } from "lucide-react";
-import { Brand } from "@/components/Brand";
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
+import Link from 'next/link';
+import { useState } from 'react';
+import { ArrowRight, Menu, X } from 'lucide-react';
+import { Brand } from '@/components/Brand';
+import { Container } from '@/components/Container';
+import styles from './styles.module.scss';
 
 export const SiteHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +15,7 @@ export const SiteHeader = () => {
   return (
     <>
       <div className={styles.topline}>
-        <Container className={styles["topline-inner"]}>
+        <Container className={styles['topline-inner']}>
           <span>Поставка ветеринарных препаратов для сельского хозяйства</span>
           <a href="tel:+79817215137">+7 (981) 721-51-37</a>
         </Container>
@@ -35,7 +35,7 @@ export const SiteHeader = () => {
           <button
             className={styles.menu}
             type="button"
-            aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
+            aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setMenuOpen((open) => !open)}
@@ -44,7 +44,7 @@ export const SiteHeader = () => {
           </button>
         </Container>
         <nav
-          className={`${styles["mobile-nav"]} ${menuOpen ? styles["mobile-nav-open"] : ""}`}
+          className={`${styles['mobile-nav']} ${menuOpen ? styles['mobile-nav-open'] : ''}`}
           id="mobile-navigation"
           aria-label="Мобильная навигация"
         >
@@ -61,7 +61,7 @@ export const SiteHeader = () => {
             Контакты
           </Link>
           <Link
-            className={styles["mobile-cta"]}
+            className={styles['mobile-cta']}
             href="/contacts"
             onClick={closeMenu}
           >

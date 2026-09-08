@@ -1,13 +1,15 @@
-import Image from "next/image";
-import { ArrowRight, ShieldCheck } from "lucide-react";
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { Container } from '@/components/Container';
+import heroVet from '@/public/hero-vet.png';
+import styles from './styles.module.scss';
 
 export const Hero = () => (
   <section className={styles.hero}>
     <Image
       className={styles.image}
-      src="/hero-vet.png"
+      src={heroVet}
       alt="Ветеринар осматривает корову на современной молочной ферме"
       fill
       priority
@@ -30,12 +32,12 @@ export const Hero = () => (
           здоровья и продуктивности молочного стада.
         </p>
         <div className={styles.actions}>
-          <a className={styles.primary}>
+          <span className={styles.primary}>
             Смотреть препараты <ArrowRight size={18} />
-          </a>
-          <a className={styles.secondary} href="/about">
+          </span>
+          <Link className={styles.secondary} href="/about">
             О компании
-          </a>
+          </Link>
         </div>
         <div className={styles.proof}>
           <ShieldCheck size={22} />

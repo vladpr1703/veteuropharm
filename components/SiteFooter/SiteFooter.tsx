@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Brand } from "@/components/Brand";
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
+import Link from 'next/link';
+import { Brand } from '@/components/Brand';
+import { Container } from '@/components/Container';
+import styles from './styles.module.scss';
 
 export const SiteFooter = () => (
   <footer className={styles.footer}>

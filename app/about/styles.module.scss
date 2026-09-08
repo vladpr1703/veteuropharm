@@ -15,10 +15,12 @@
 .hero-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg,
-      rgba(7, 38, 35, 0.8),
-      rgba(7, 38, 35, 0.42) 52%,
-      rgba(7, 38, 35, 0.18));
+  background: linear-gradient(
+    90deg,
+    rgba(7, 38, 35, 0.8),
+    rgba(7, 38, 35, 0.42) 52%,
+    rgba(7, 38, 35, 0.18)
+  );
 }
 
 .hero-inner {
@@ -61,7 +63,7 @@
 }
 
 .story-heading {
-  >span {
+  > span {
     color: var(--teal);
     text-transform: uppercase;
     letter-spacing: 0.17em;
@@ -103,7 +105,7 @@
   margin: 0 auto 56px;
   text-align: center;
 
-  >span {
+  > span {
     color: var(--teal);
     text-transform: uppercase;
     letter-spacing: 0.17em;
@@ -191,7 +193,7 @@
     text-align: center;
   }
 
-  >article+article {
+  > article + article {
     border-left: 1px solid var(--line);
   }
 
@@ -255,7 +257,7 @@
   z-index: 1;
   text-align: center;
 
-  >span {
+  > span {
     color: var(--lime);
     text-transform: uppercase;
     letter-spacing: 0.17em;
@@ -270,7 +272,7 @@
     font-weight: 500;
   }
 
-  >p {
+  > p {
     margin: 0 0 30px;
     color: #d4e3df;
   }
@@ -400,7 +402,7 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 65px;
 
-    >article:nth-child(3) {
+    > article:nth-child(3) {
       border-left: 0;
     }
   }
@@ -430,7 +432,7 @@
     grid-template-columns: 1fr;
     row-gap: 65px;
 
-    >article+article {
+    > article + article {
       border-left: 0;
     }
   }

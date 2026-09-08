@@ -10,6 +10,12 @@ import { ContactSection } from '@/components/ContactSection';
 import { Container } from '@/components/Container';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import partnersHero from '@/public/partners-hero.png';
+import belVitunipharmLogo from '@/public/partner-belvitunipharm-original.png';
+import gomelLogo from '@/public/partner-gzvp.png';
+import mogilevLogo from '@/public/partner-mzvp-v2.png';
+import tmLogo from '@/public/partner-tm.png';
+import vitebskLogo from '@/public/partner-vzvp-v2.svg';
 import styles from './styles.module.scss';
 
 export const metadata: Metadata = {
@@ -22,7 +28,7 @@ const partners = [
   {
     name: 'Гомельский завод ветеринарных препаратов',
     short: 'ГЗВП',
-    logo: '/partner-gzvp.png',
+    logo: gomelLogo,
     tone: 'blue',
     description:
       'Предприятие работает на ветеринарном рынке с 1975 года. Главное направление деятельности — производство химико-фармацевтических лекарственных средств для животных.',
@@ -38,7 +44,7 @@ const partners = [
   {
     name: 'Витебский завод ветеринарных препаратов',
     short: 'ВЗВП',
-    logo: '/partner-vzvp-v2.svg',
+    logo: vitebskLogo,
     tone: 'green',
     description:
       'Производственное унитарное предприятие основано в 1979 году. Завод специализируется на выпуске ветеринарных препаратов для сельскохозяйственных и домашних животных, пушных зверей, птиц и пчёл.',
@@ -53,7 +59,7 @@ const partners = [
   {
     name: 'Могилевский завод ветеринарных препаратов',
     short: 'МЗВП',
-    logo: '/partner-mzvp-v2.png',
+    logo: mogilevLogo,
     tone: 'cyan',
     description:
       'Белорусское производственное предприятие, специализирующееся на разработке и выпуске ветеринарных препаратов для крупного и мелкого рогатого скота, свиней, птиц, лошадей и домашних животных.',
@@ -68,7 +74,7 @@ const partners = [
   {
     name: 'ТМ',
     short: 'T&M',
-    logo: '/partner-tm.png',
+    logo: tmLogo,
     tone: 'navy',
     description:
       'Белорусская компания, основанная в 1992 году, специализируется на производстве и оптовой реализации ветеринарных препаратов для сельскохозяйственных животных, рыбы и птицы.',
@@ -83,7 +89,7 @@ const partners = [
   {
     name: 'БелВитунифарм',
     short: 'БВФ',
-    logo: '/partner-belvitunipharm-original.png',
+    logo: belVitunipharmLogo,
     tone: 'violet',
     description:
       'ОАО «БелВитунифарм» — производитель ветеринарных биологических препаратов в Республике Беларусь. Предприятие основано в 1930 году.',
@@ -104,7 +110,7 @@ export default function PartnersPage() {
       <section className={styles.hero}>
         <Image
           className={styles['hero-image']}
-          src="/partners-hero.png"
+          src={partnersHero}
           alt="Деловое рукопожатие"
           fill
           priority

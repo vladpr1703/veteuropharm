@@ -1,6 +1,6 @@
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
-import { advantages } from "./constants";
+import { Container } from '@/components/Container';
+import styles from './styles.module.scss';
+import { advantages } from './constants';
 
 export const TrustStrip = () => (
   <section className={styles.strip} aria-label="Преимущества">

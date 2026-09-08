@@ -1,8 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
-import { advantages, partners } from "./constants";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Container } from '@/components/Container';
+import animalsImage from '@/public/home-advantages-animals.png';
+import styles from './styles.module.scss';
+import { advantages, partners } from './constants';
 
 export const AdvantagesPartners = () => (
   <section className={styles.section}>
@@ -11,7 +12,7 @@ export const AdvantagesPartners = () => (
         <div className={styles.advantages}>
           <span className={styles.kicker}>Почему выбирают нас</span>
           <h2>Наши преимущества</h2>
-          <div className={styles["advantage-grid"]}>
+          <div className={styles['advantage-grid']}>
             {advantages.map(({ icon: Icon, title }) => (
               <article key={title}>
                 <span className={styles.icon}>
@@ -25,7 +26,7 @@ export const AdvantagesPartners = () => (
         <div className={styles.visual}>
           <div className={styles.animals}>
             <Image
-              src="/home-advantages-animals.png"
+              src={animalsImage}
               alt="Сельскохозяйственные животные"
               fill
               sizes="(max-width: 800px) 100vw, 48vw"
@@ -40,18 +41,18 @@ export const AdvantagesPartners = () => (
         </div>
       </div>
       <div className={styles.partners}>
-        <div className={styles["partner-heading"]}>
+        <div className={styles['partner-heading']}>
           <div>
             <span className={styles.kicker}>Сотрудничаем напрямую</span>
             <h2>Наши партнёры</h2>
           </div>
           <Link href="/partners">Все партнёры →</Link>
         </div>
-        <div className={styles["partner-grid"]}>
+        <div className={styles['partner-grid']}>
           {partners.map(({ src, alt, wide }) => (
             <Link
               href="/partners"
-              className={`${styles.partner} ${wide ? styles.wide : ""}`}
+              className={`${styles.partner} ${wide ? styles.wide : ''}`}
               key={alt}
               aria-label={alt}
             >

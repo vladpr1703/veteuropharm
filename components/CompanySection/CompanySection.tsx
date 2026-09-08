@@ -1,14 +1,14 @@
-import { ArrowRight, CheckCircle2, FlaskConical } from "lucide-react";
-import Link from "next/link";
-import { Container } from "@/components/Container";
-import styles from "./styles.module.scss";
+import { ArrowRight, CheckCircle2, FlaskConical } from 'lucide-react';
+import Link from 'next/link';
+import { Container } from '@/components/Container';
+import styles from './styles.module.scss';
 
 export const CompanySection = () => (
   <section className={styles.company} id="company">
     <Container className={styles.grid}>
       <div className={styles.visual}>
-        <div className={styles["year-card"]}>
-          <div className={styles["year-label"]}>
+        <div className={styles['year-card']}>
+          <div className={styles['year-label']}>
             <FlaskConical />
             <span>Опыт и надёжность</span>
           </div>
@@ -20,7 +20,7 @@ export const CompanySection = () => (
             предприятий
           </p>
         </div>
-        <div className={styles["visual-facts"]}>
+        <div className={styles['visual-facts']}>
           <div>
             <CheckCircle2 />
             <span>Прямые поставки</span>
