@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
-import { Container } from '@/components/Container';
-import heroVet from '@/public/hero-vet.png';
-import styles from './styles.module.scss';
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ShieldCheck } from "lucide-react";
+import { Container } from "@/components/Container";
+import heroVet from "@/public/hero-vet.png";
+import styles from "./styles.module.scss";
 
 export const Hero = () => (
   <section className={styles.hero}>
@@ -32,9 +32,9 @@ export const Hero = () => (
           здоровья и продуктивности молочного стада.
         </p>
         <div className={styles.actions}>
-          <span className={styles.primary}>
+          <a className={styles.primary}>
             Смотреть препараты <ArrowRight size={18} />
-          </span>
+          </a>
           <Link className={styles.secondary} href="/about">
             О компании
           </Link>
