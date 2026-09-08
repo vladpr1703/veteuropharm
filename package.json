@@ -27,6 +27,5 @@
     "oxlint-tsgolint": "7.0.2001",
     "sass": "^1.104.0",
     "typescript": "5.9.3"
-  },
-  "type": "module"
+  }
 }
