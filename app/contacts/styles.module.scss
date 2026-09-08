@@ -6,7 +6,7 @@
   overflow: hidden;
   color: white;
 }
-.heroImage {
+.hero-image {
   object-fit: cover;
   object-position: center 42%;
 }
@@ -17,7 +17,7 @@
     linear-gradient(90deg, rgba(4, 28, 27, 0.88), rgba(4, 28, 27, 0.42)),
     linear-gradient(0deg, rgba(3, 22, 21, 0.28), transparent);
 }
-.heroInner {
+.hero-inner {
   position: relative;
   z-index: 1;
   padding-bottom: 45px;
@@ -43,12 +43,12 @@
   font-size: 0.72rem;
   font-weight: 800;
 }
-.contactBand {
+.contact-band {
   position: relative;
   z-index: 2;
   margin-top: -76px;
 }
-.contactGrid {
+.contact-grid {
   display: grid;
   grid-template-columns: 1.12fr 1fr;
   grid-template-rows: repeat(2, minmax(86px, auto));
@@ -59,7 +59,7 @@
   border-radius: 19px;
   box-shadow: 0 15px 38px rgba(8, 43, 41, 0.11);
 }
-.contactItem {
+.contact-item {
   min-width: 0;
   padding: 16px 22px;
   display: flex;
@@ -78,7 +78,7 @@
     transform: translateY(-2px);
   }
 }
-.contactIcon {
+.contact-icon {
   width: 42px;
   height: 42px;
   flex: 0 0 42px;
@@ -92,7 +92,7 @@
     height: 25px;
   }
 }
-.contactCopy {
+.contact-copy {
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -125,7 +125,7 @@
     border-color: #c8ddd3;
     border-left-color: var(--lime);
   }
-  .contactIcon {
+  .contact-icon {
     width: 50px;
     height: 50px;
     flex: 0 0 50px;
@@ -136,7 +136,7 @@
       height: 29px;
     }
   }
-  .contactCopy {
+  .contact-copy {
     gap: 9px;
     small {
       color: var(--teal);
@@ -152,7 +152,7 @@
     }
   }
 }
-.phoneList {
+.phone-list {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -173,11 +173,11 @@
 .whatsapp {
   background: #f2f8f2;
   border-color: #d4e9d6;
-  .contactIcon {
+  .contact-icon {
     background: #d7efd9;
     color: #27843c;
   }
-  .contactCopy strong {
+  .contact-copy strong {
     color: #247638;
   }
 }
@@ -329,7 +329,7 @@
   }
 }
 @media (max-width: 1000px) {
-  .contactGrid {
+  .contact-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -346,19 +346,19 @@
   .hero {
     min-height: 370px;
   }
-  .heroInner {
+  .hero-inner {
     padding-bottom: 55px;
   }
-  .contactBand {
+  .contact-band {
     margin-top: -46px;
   }
-  .contactGrid {
+  .contact-grid {
     grid-template-columns: 1fr;
     gap: 9px;
     padding: 9px;
     border-radius: 20px;
   }
-  .contactItem {
+  .contact-item {
     padding: 17px;
   }
   .primary {

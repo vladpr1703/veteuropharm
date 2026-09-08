@@ -5,6 +5,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid var(--line);
 }
 .item {
   height: 118px;
@@ -13,9 +14,6 @@
   gap: 15px;
   padding: 0 25px;
   border-right: 1px solid var(--line);
-  &:first-child {
-    border-left: 1px solid var(--line);
-  }
   svg {
     color: var(--teal);
     width: 27px;

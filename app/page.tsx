@@ -1,8 +1,8 @@
 import { CompanySection } from '@/components/CompanySection';
+import { AdvantagesPartners } from '@/components/AdvantagesPartners';
+import { CategoriesSection } from '@/components/CategoriesSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Hero } from '@/components/Hero';
-import { KnowledgeSection } from '@/components/KnowledgeSection';
-import { ProductsSection } from '@/components/ProductsSection';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TrustStrip } from '@/components/TrustStrip';
@@ -13,9 +13,9 @@ export default function Home() {
       <SiteHeader />
       <Hero />
       <TrustStrip />
-      <ProductsSection />
+      <CategoriesSection />
       <CompanySection />
-      <KnowledgeSection />
+      <AdvantagesPartners />
       <ContactSection />
       <SiteFooter />
     </main>
