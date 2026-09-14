@@ -1,0 +1,401 @@
+.hero {
+  min-height: 310px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: white;
+  background: radial-gradient(circle at 20% 20%, rgba(196, 223, 75, .2), transparent 28%), linear-gradient(120deg, rgba(0, 74, 71, .96), rgba(0, 110, 103, .88)), url('/hero-vet.png') center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: -65px;
+  height: 110px;
+  background: var(--paper);
+  border-radius: 50% 50% 0 0;
+}
+
+.hero div {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 35px;
+}
+
+.hero span {
+  color: var(--lime);
+  text-transform: uppercase;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+
+.hero h1 {
+  font-size: clamp(3.5rem, 7vw, 6.6rem);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  margin: 14px 0 16px;
+  line-height: .94;
+}
+
+.hero p {
+  margin: 0 auto;
+  color: #dce9e5;
+  max-width: 620px;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.catalog {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 100px;
+}
+
+.loading {
+  width: min(1280px, calc(100% - 48px));
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 60px 0;
+  color: var(--muted);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 34px;
+}
+
+.search {
+  width: min(430px, 100%);
+  height: 52px;
+  background: white;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 17px;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(16, 44, 44, .06);
+}
+
+.search svg {
+  color: var(--teal);
+  flex: 0 0 auto;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+}
+
+.search button,
+.filtersHead button {
+  border: 0;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.filterButton {
+  display: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.filters {
+  position: sticky;
+  top: 120px;
+  padding: 25px 0;
+  border-top: 3px solid var(--teal);
+}
+
+.filtersHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  font-size: 1.15rem;
+}
+
+.filtersHead button {
+  display: none;
+}
+
+.filters label {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 11px 0;
+  cursor: pointer;
+  color: #405451;
+  line-height: 1.35;
+}
+
+.filters input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cad6d1;
+  background: white;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.filters input:checked {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.filters input:checked::after {
+  content: '✓';
+  color: white;
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+.clear {
+  border: 0;
+  background: none;
+  color: var(--teal);
+  font-weight: 700;
+  padding: 18px 0;
+  cursor: pointer;
+}
+
+.resultMeta {
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: white;
+  min-width: 0;
+  box-shadow: 0 12px 35px rgba(16, 44, 44, .08);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(16, 44, 44, .13);
+}
+
+.image {
+  height: 275px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 24px;
+  background: linear-gradient(145deg, #fff, #f7faf8);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardBody {
+  border-top: 1px solid #edf1ee;
+  padding: 22px 24px 26px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  color: #688527;
+  font-size: .76rem;
+  font-weight: 700;
+  min-height: 31px;
+}
+
+.card h2 {
+  margin: 8px 0;
+  font-size: 1.45rem;
+  letter-spacing: -.02em;
+}
+
+.card p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: .9rem;
+  flex: 1;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 17px;
+  color: var(--teal);
+  font-size: .84rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.more span {
+  font-size: 1.3rem;
+  transition: transform .2s ease;
+}
+
+.card:hover .more span {
+  transform: translateX(4px);
+}
+
+.empty {
+  min-height: 380px;
+  background: white;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.empty h2 {
+  margin: 0
+}
+
+.empty p {
+  color: var(--muted)
+}
+
+.empty button {
+  border: 0;
+  background: var(--teal);
+  color: white;
+  padding: 14px 20px;
+  font-weight: 700;
+  cursor: pointer
+}
+
+.backdrop {
+  display: none;
+}
+
+@media(max-width:1050px) {
+  .layout {
+    grid-template-columns: 220px 1fr;
+    gap: 28px
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media(max-width:720px) {
+  .hero {
+    min-height: 250px
+  }
+
+  .hero p {
+    padding: 0 22px;
+    font-size: .95rem
+  }
+
+  .catalog {
+    width: calc(100% - 30px);
+    padding: 25px 0 70px
+  }
+
+  .toolbar {
+    gap: 10px
+  }
+
+  .filterButton {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--line);
+    background: white;
+    padding: 0 14px;
+    color: var(--teal);
+    font-weight: 700
+  }
+
+  .search {
+    height: 48px
+  }
+
+  .layout {
+    display: block
+  }
+
+  .filters {
+    position: fixed;
+    z-index: 51;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: min(340px, 88vw);
+    background: white;
+    padding: 28px 22px;
+    transform: translateX(-105%);
+    transition: transform .2s ease
+  }
+
+  .filtersOpen {
+    transform: translateX(0)
+  }
+
+  .filtersHead button {
+    display: block
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    border: 0;
+    background: rgba(7, 31, 30, .45);
+    z-index: 50
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px
+  }
+
+  .image {
+    height: 260px
+  }
+
+  .resultMeta {
+    height: 38px
+  }
+
+  .resultMeta span:last-child {
+    display: none
+  }
+}

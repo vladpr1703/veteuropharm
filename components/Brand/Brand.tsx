@@ -1,13 +1,10 @@
-import Link from 'next/link';
-import styles from './styles.module.scss';
+import Link from "next/link";
+import { BrandProps } from "./types";
+import styles from "./styles.module.scss";
 
-type BrandProps = {
-  variant?: 'default' | 'light';
-};
-
-export const Brand = ({ variant = 'default' }: BrandProps) => (
+export const Brand = ({ variant = "default" }: BrandProps) => (
   <Link
-    className={`${styles.brand} ${variant === 'light' ? styles.light : ''}`}
+    className={`${styles.brand} ${variant === "light" ? styles.light : ""}`}
     href="/"
     aria-label="ВетЕвроФарм — на главную"
   >

@@ -32,9 +32,9 @@ export const Hero = () => (
           здоровья и продуктивности молочного стада.
         </p>
         <div className={styles.actions}>
-          <a className={styles.primary}>
+          <Link className={styles.primary} href="/catalog">
             Смотреть препараты <ArrowRight size={18} />
-          </a>
+          </Link>
           <Link className={styles.secondary} href="/about">
             О компании
           </Link>
