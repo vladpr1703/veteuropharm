@@ -9,7 +9,7 @@ export const SiteFooter = () => (
       <Brand variant="light" />
       <div>
         <strong>Продукция</strong>
-        <Link href="/">Каталог препаратов</Link>
+        <Link href="/catalog">Каталог препаратов</Link>
         <Link href="/contacts">Где купить</Link>
       </div>
       <div>

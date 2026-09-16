@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { Container } from '@/components/Container';
 import styles from './styles.module.scss';
 import { categories } from './constants';
@@ -18,19 +19,27 @@ export const CategoriesSection = () => (
       </div>
 
       <div className={styles.grid}>
-        {categories.map(({ icon: Icon, title }, index) => (
-          <article className={styles.card} key={title}>
-            <span className={styles.number}>
-              {String(index + 1).padStart(2, '0')}
-            </span>
+        {categories.map(({ icon: Icon, title, category }) => (
+          <Link
+            className={styles.card}
+            href={{ pathname: '/catalog', query: { category } }}
+            key={title}
+          >
             <span className={styles.icon}>
               <Icon strokeWidth={1.6} aria-hidden="true" />
             </span>
-            <h3>{title}</h3>
-            <span className={styles.action}>
-              Подобрать <ArrowRight size={17} />
+            <span className={styles.content}>
+              <h3>{title}</h3>
+              <span className={styles.action}>
+                Смотреть препараты
+                <ArrowRight
+                  className={styles.arrow}
+                  size={17}
+                  aria-hidden="true"
+                />
+              </span>
             </span>
-          </article>
+          </Link>
         ))}
       </div>
     </Container>

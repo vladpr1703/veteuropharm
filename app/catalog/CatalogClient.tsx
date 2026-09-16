@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { Search, SlidersHorizontal, X } from "lucide-react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
-import { categories, products, type Category } from "@/lib/products";
-import styles from "./styles.module.scss";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Search, SlidersHorizontal, X } from 'lucide-react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useMemo, useState } from 'react';
+import { categories, products, type Category } from '@/lib/products';
+import styles from './styles.module.scss';
 
 const categoryList: Category[] = Object.values(categories);
 
@@ -15,9 +15,9 @@ export function CatalogClient() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const query = searchParams.get("q") ?? "";
+  const query = searchParams.get('q') ?? '';
   const selected = searchParams
-    .getAll("category")
+    .getAll('category')
     .filter((category): category is Category =>
       categoryList.includes(category as Category),
     );
@@ -33,8 +33,8 @@ export function CatalogClient() {
 
   const setQuery = (value: string) =>
     updateUrl((params) => {
-      if (value) params.set("q", value);
-      else params.delete("q");
+      if (value) params.set('q', value);
+      else params.delete('q');
     });
 
   const filtered = useMemo(
@@ -42,12 +42,12 @@ export function CatalogClient() {
       products.filter((product) => {
         const matchesCategory =
           !selected.length || selected.includes(product.category);
-        const needle = query.trim().toLocaleLowerCase("ru");
+        const needle = query.trim().toLocaleLowerCase('ru');
         return (
           matchesCategory &&
           (!needle ||
             `${product.name} ${product.summary}`
-              .toLocaleLowerCase("ru")
+              .toLocaleLowerCase('ru')
               .includes(needle))
         );
       }),
@@ -57,28 +57,28 @@ export function CatalogClient() {
   const toggle = (category: Category) =>
     updateUrl((params) => {
       const current = params
-        .getAll("category")
+        .getAll('category')
         .filter((item): item is Category =>
           categoryList.includes(item as Category),
         );
-      params.delete("category");
+      params.delete('category');
       const next = current.includes(category)
         ? current.filter((item) => item !== category)
         : [...current, category];
-      next.forEach((item) => params.append("category", item));
+      next.forEach((item) => params.append('category', item));
     });
 
   const clearAll = () =>
     updateUrl((params) => {
-      params.delete("q");
-      params.delete("category");
+      params.delete('q');
+      params.delete('category');
     });
 
   return (
     <section className={styles.catalog}>
       <div className={styles.toolbar}>
         <button
-          className={styles.filterButton}
+          className={styles['filter-button']}
           onClick={() => setFiltersOpen(true)}
         >
           <SlidersHorizontal size={19} /> Фильтры
@@ -92,7 +92,7 @@ export function CatalogClient() {
             aria-label="Поиск по каталогу"
           />
           {query && (
-            <button onClick={() => setQuery("")} aria-label="Очистить поиск">
+            <button onClick={() => setQuery('')} aria-label="Очистить поиск">
               <X size={18} />
             </button>
           )}
@@ -100,9 +100,9 @@ export function CatalogClient() {
       </div>
       <div className={styles.layout}>
         <aside
-          className={`${styles.filters} ${filtersOpen ? styles.filtersOpen : ""}`}
+          className={`${styles.filters} ${filtersOpen ? styles['filters-open'] : ''}`}
         >
-          <div className={styles.filtersHead}>
+          <div className={styles['filters-head']}>
             <strong>Категории</strong>
             <button
               onClick={() => setFiltersOpen(false)}
@@ -124,7 +124,7 @@ export function CatalogClient() {
           {selected.length > 0 && (
             <button
               className={styles.clear}
-              onClick={() => updateUrl((params) => params.delete("category"))}
+              onClick={() => updateUrl((params) => params.delete('category'))}
             >
               Сбросить фильтры
             </button>
@@ -138,7 +138,7 @@ export function CatalogClient() {
           />
         )}
         <div className={styles.results}>
-          <div className={styles.resultMeta}>
+          <div className={styles['result-meta']}>
             <span>Найдено: {filtered.length}</span>
             {selected.length > 0 && (
               <span>Выбрано категорий: {selected.length}</span>
@@ -159,7 +159,7 @@ export function CatalogClient() {
                       height={440}
                     />
                   </Link>
-                  <div className={styles.cardBody}>
+                  <div className={styles['card-body']}>
                     <span className={styles.category}>{product.category}</span>
                     <h2>
                       <Link href={`/catalog/${product.slug}`}>
